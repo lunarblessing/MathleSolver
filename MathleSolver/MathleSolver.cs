@@ -17,6 +17,9 @@ namespace MathleSolver
 		LinkedList<Equation> PossibleSolutions { get; set; }
 		List<byte> ImpossibleToGuess { get; set; }
 
+		/// <summary>
+		/// Initializes an instance and prepares its inner state for calculation
+		/// </summary>
 		public Solver()
 		{
 			ImpossibleToGuess = new List<byte>( 12 );
@@ -214,7 +217,7 @@ namespace MathleSolver
 
 
 		/// <summary>
-		/// Resets state to default
+		/// Resets state to default.
 		/// </summary>
 		public void Reset()
 		{

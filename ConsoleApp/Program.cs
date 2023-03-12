@@ -40,11 +40,14 @@ namespace ConsoleApp
 				{
 					try
 					{
-						Equation guess = new Equation( Console.ReadLine() );
-						GuessResult result = new GuessResult( Console.ReadLine() );
-						validInput = true;
+                        Console.WriteLine("Please write your guess in game");
+                        Equation guess = new Equation( Console.ReadLine() );
+                        Console.WriteLine("Please write the information you got on this guess: use 'G' for green digits," +
+							" 'Y' for yellow, and 'B' for black (grey) digits");
+                        GuessResult result = new GuessResult( Console.ReadLine() );
 						solver.ProcessInput( guess, result );
 						bestGuesses = solver.GetBestGuesses();
+						validInput = true;
 					}
 					catch
 					{
